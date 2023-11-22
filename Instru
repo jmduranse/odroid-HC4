@@ -1,0 +1,1 @@
+ flash it to SD card. Boot with SD card while keep pressing the switch until the blue LED on, then the SPI flash memory will be restored.
