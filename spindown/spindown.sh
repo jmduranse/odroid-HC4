@@ -18,6 +18,23 @@ function spindown() {
     fi
 }
 
+
+function check_use() {
+
+    local fileuse
+    fileuse="$(lsof "$1")"
+
+    if  [[ -n  "$fileuse" ]]
+    then
+        mail -s "Unable to spin down disk $1"  jmduran <<<"$fileuse"
+	return 1
+
+    else
+	return 0
+    fi
+}
+
+
 sync
 
 # Spin down drives
