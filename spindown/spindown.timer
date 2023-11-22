@@ -1,0 +1,8 @@
+[Unit]
+Description=Runs at Mon-Fri 3:00 
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 3:00:00
+
+[Install]
+WantedBy=timers.target

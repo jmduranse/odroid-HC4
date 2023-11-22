@@ -1,0 +1,6 @@
+[Unit]
+Description=Spin down hard disks
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /usr/bin/spindown.sh
